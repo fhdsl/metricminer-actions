@@ -21,7 +21,7 @@ jobs:
 
       - name: Install metricminer from Github
         run: |
-          Rscript -e "remotes::install_github("fhdsl/metricminer")"
+          Rscript -e "remotes::install_github('fhdsl/metricminer')"
 
       - name: Check out repository
         uses: actions/checkout@v3
