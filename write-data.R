@@ -1,3 +1,4 @@
+library(metricminer)
 library(googlesheets4)
 
 # The data is publicly available so we don't need to authenticate
@@ -18,5 +19,3 @@ link_clicks <- stats_list$link_clicks
 metrics %>% sheet_write(ss = sheet_url, sheet = "metrics")
 dimensions %>% sheet_write(ss = sheet_url, sheet = "dimensions")
 link_clicks %>% sheet_write(ss = sheet_url, sheet = "link_clicks")
-
-# GitHub----
