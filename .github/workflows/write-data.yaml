@@ -21,7 +21,7 @@ jobs:
 
       - name: Install metricminer from Github
         env:
-          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_PAT: ${{ secrets.PAT }}
         run: |
           Rscript -e "remotes::install_github('fhdsl/metricminer')"
 
