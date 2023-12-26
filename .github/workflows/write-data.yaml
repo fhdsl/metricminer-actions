@@ -20,6 +20,8 @@ jobs:
           Rscript -e "install.packages('remotes')"
 
       - name: Install metricminer from Github
+        env:
+          GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           Rscript -e "remotes::install_github('fhdsl/metricminer')"
 
