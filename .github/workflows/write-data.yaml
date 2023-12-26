@@ -15,15 +15,11 @@ jobs:
           packages: |
             any::googlesheets4
 
-      - name: Install remotes
-        run: |
-          Rscript -e "install.packages('remotes')"
-
       - name: Install metricminer from Github
         env:
           GITHUB_PAT: ${{ secrets.PAT }}
         run: |
-          Rscript -e "remotes::install_github('fhdsl/metricminer')"
+          Rscript -e "pak::pkg_install('fhdsl/metricminer')"
 
       - name: Check out repository
         uses: actions/checkout@v3
